@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 // Colors
 Color blackColor = Color(0xff000000);
 Color greyColor = Color(0xff8A8A8A);
+Color buttonGreyColor = Color(0xffE2E2E2);
 Color whiteColor = Color(0xffFFFFFF);
 Color redColor = Color(0xffBA1717);
 
