@@ -46,6 +46,8 @@ class LoginPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 30,
                 ),
+
+                // NOTE: FORM LOGIN
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
