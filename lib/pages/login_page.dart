@@ -2,6 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:penggajian/pages/loading_page_pembayaran.dart';
 import 'package:penggajian/pages/register_page.dart';
 import 'package:penggajian/theme.dart';
 
@@ -89,7 +90,14 @@ class LoginPage extends StatelessWidget {
                       width: 300,
                       height: 50,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoadingPembayaran(),
+                            ),
+                          );
+                        },
                         color: redColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(15),
