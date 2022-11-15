@@ -119,7 +119,7 @@ class RegisterPage extends StatelessWidget {
                     Container(
                       width: 300,
                       height: 50,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -128,9 +128,13 @@ class RegisterPage extends StatelessWidget {
                             ),
                           );
                         },
-                        color: redColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
+                        style: ElevatedButton.styleFrom(
+                          primary: redColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              15,
+                            ),
+                          ),
                         ),
                         child: Text(
                           'Mendaftar',

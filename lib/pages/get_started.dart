@@ -56,7 +56,7 @@ class GetStarted extends StatelessWidget {
                   Container(
                     width: 147,
                     height: 37,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -65,7 +65,9 @@ class GetStarted extends StatelessWidget {
                           ),
                         );
                       },
-                      color: buttonGreyColor,
+                      style: ElevatedButton.styleFrom(
+                        primary: buttonGreyColor,
+                      ),
                       child: Text(
                         'Daftar',
                         style: whiteTextStyle.copyWith(
@@ -77,7 +79,7 @@ class GetStarted extends StatelessWidget {
                   Container(
                     width: 147,
                     height: 37,
-                    child: RaisedButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -86,7 +88,9 @@ class GetStarted extends StatelessWidget {
                           ),
                         );
                       },
-                      color: redColor,
+                      style: ElevatedButton.styleFrom(
+                        primary: redColor,
+                      ),
                       child: Text(
                         'Login',
                         style: whiteTextStyle.copyWith(
