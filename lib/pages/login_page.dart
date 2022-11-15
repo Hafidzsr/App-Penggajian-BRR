@@ -1,7 +1,9 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, deprecated_member_use
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, deprecated_member_use, unused_import
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:penggajian/pages/home_page_stateful.dart';
+import 'package:penggajian/pages/home_page_stateless.dart';
 import 'package:penggajian/pages/loading_page_pembayaran.dart';
 import 'package:penggajian/pages/register_page.dart';
 import 'package:penggajian/theme.dart';
@@ -89,18 +91,20 @@ class LoginPage extends StatelessWidget {
                     Container(
                       width: 300,
                       height: 50,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LoadingPembayaran(),
+                              builder: (context) => HomePageStateful(),
                             ),
                           );
                         },
-                        color: redColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
+                        style: ElevatedButton.styleFrom(
+                          primary: redColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                         ),
                         child: Text(
                           'Login',
