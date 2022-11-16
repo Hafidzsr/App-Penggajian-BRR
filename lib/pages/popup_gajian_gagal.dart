@@ -51,6 +51,9 @@ class PopUpGajiGagal extends StatelessWidget {
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   primary: redColor,
                 ),
                 child: Text(

@@ -1,9 +1,9 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace, deprecated_member_use
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:penggajian/theme.dart';
 
-class PopUpGajiBerhasil extends StatelessWidget {
+class PopUpDaftarGagal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +14,7 @@ class PopUpGajiBerhasil extends StatelessWidget {
           children: [
             Center(
               child: Image.asset(
-                'assets/images/popup_gaji_berhasil.png',
+                'assets/images/popup_daftar_berhasil.png',
                 width: 287,
                 height: 257,
               ),
@@ -23,11 +23,21 @@ class PopUpGajiBerhasil extends StatelessWidget {
               height: 80,
             ),
             Text(
-              'Gaji Periode 25 OCT, 2022\nSebesar Rp. 2.000.000,-\nBerhasil dibayar!',
+              'Pendaftaran Gagal',
               style: blackTextStyle.copyWith(
                 fontSize: 20,
               ),
               textAlign: TextAlign.center,
+            ),
+            SizedBox(
+              height: 4,
+            ),
+            Text(
+              'Periksa jaringan anda dan coba lagi',
+              style: greyTextStyle.copyWith(
+                fontWeight: FontWeight.w400,
+                fontSize: 15,
+              ),
             ),
             SizedBox(
               height: 60,
@@ -46,7 +56,7 @@ class PopUpGajiBerhasil extends StatelessWidget {
                   primary: redColor,
                 ),
                 child: Text(
-                  'Kembali',
+                  'Coba lagi',
                   style: whiteTextStyle.copyWith(
                     fontSize: 10,
                   ),
