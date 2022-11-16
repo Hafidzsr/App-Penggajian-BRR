@@ -43,13 +43,12 @@ class PopUpKaryawanGagal extends StatelessWidget {
             Container(
               width: 138,
               height: 33,
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                color: redColor,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+                style: ElevatedButton.styleFrom(
+                  primary: redColor,
                 ),
                 child: Text(
                   'Coba lagi',
