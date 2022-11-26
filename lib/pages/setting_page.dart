@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
+import 'package:penggajian/pages/login_page.dart';
 import 'package:penggajian/theme.dart';
 
 class Setting extends StatefulWidget {
@@ -118,6 +119,35 @@ class _SettingState extends State<Setting> {
                                           )
                                     ),
                                 ),
+                                const SizedBox(
+                                  height: 114,
+                                ),
+                                Container(
+                                  width: 138,
+                                  height: 33,
+                                  child: ElevatedButton(
+                                  onPressed: () {
+                                  Navigator.push(
+                                  context,
+                                   MaterialPageRoute(
+                                   builder: (context) => LoginPage(),
+                                    ),
+                                    );
+                                      },
+                                style: ElevatedButton.styleFrom(
+                                  primary: redColor,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15),
+                                        ),
+                                          ),
+                                      child: Text(
+                                       'Logout',
+                                        style: whiteTextStyle.copyWith(
+                                        fontSize: 10,
+                                         ),
+                                          ),
+                                            ),
+                                             ),
                               ],
                             ),
 
