@@ -180,6 +180,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
+            
             icon: Image.asset(
               'assets/icons/icon_nav_absensi.png',
               width: 20,

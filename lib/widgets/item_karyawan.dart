@@ -17,7 +17,7 @@ class ItemKaryawan extends StatelessWidget {
           width: 28,
         ),
         SizedBox(
-          width: 28,
+          width: 8,
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,

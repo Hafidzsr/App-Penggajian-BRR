@@ -9,6 +9,7 @@ Color greyColor = Color(0xff8A8A8A);
 Color buttonGreyColor = Color(0xffE2E2E2);
 Color whiteColor = Color(0xffFFFFFF);
 Color redColor = Color(0xffBA1717);
+Color lightGreyColor = Color(0xffE3E3E3);
 
 // Textstyle
 TextStyle blackTextStyle = GoogleFonts.poppins(
