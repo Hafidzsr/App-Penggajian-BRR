@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                         hintText: 'Password',
                         hintStyle: greyTextStyle.copyWith(
                           fontWeight: FontWeight.w600,
-                          fontSize: 13,
+                          fontSize: 12,
                         ),
                       ),
                     ),
