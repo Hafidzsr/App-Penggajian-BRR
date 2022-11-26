@@ -101,6 +101,9 @@ class _SettingState extends State<Setting> {
                                           )
                                     ),
                                 ),
+                                SizedBox(
+                                  height: 26,
+                                ),
                                 Container(
                                   // ignore: sort_child_properties_last
                                   child: Text(
