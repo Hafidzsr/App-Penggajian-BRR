@@ -2,10 +2,12 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:penggajian/pages/application_information.dart';
 import 'package:penggajian/pages/gaji_page.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
 import 'package:penggajian/pages/home_page_stateless.dart';
 import 'package:penggajian/pages/loading_page_pembayaran.dart';
+import 'package:penggajian/pages/profil_perusahaan.dart';
 import 'package:penggajian/pages/register_page.dart';
 import 'package:penggajian/pages/setting_page.dart';
 import 'package:penggajian/theme.dart';
@@ -98,7 +100,7 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => Setting(),
+                              builder: (context) => ProfilPerusahaan(),
                             ),
                           );
                         },
