@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:penggajian/models/karyawan.dart';
+import 'package:penggajian/pages/tambah_karyawan.dart';
 import 'package:penggajian/theme.dart';
 import 'package:penggajian/widgets/item_karyawan.dart';
 
@@ -14,9 +15,11 @@ class _HomePageStatefulState extends State<HomePageStateful> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    setState(
+      () {
+        _selectedIndex = index;
+      },
+    );
   }
 
   @override
@@ -73,36 +76,44 @@ class _HomePageStatefulState extends State<HomePageStateful> {
                         height: 30,
                       ),
                       Container(
-                          width: 138,
-                          height: 33,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              primary: redColor,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15),
+                        width: 138,
+                        height: 33,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => TambahKaryawan(),
                               ),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            primary: redColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Tambah Karyawan',
-                                  style: whiteTextStyle.copyWith(
-                                    fontSize: 10,
-                                  ),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Tambah Karyawan',
+                                style: whiteTextStyle.copyWith(
+                                  fontSize: 10,
                                 ),
-                                SizedBox(
-                                  width: 2,
-                                ),
-                                Image.asset(
-                                  'assets/icons/icon_forward.png',
-                                  width: 6,
-                                  height: 12,
-                                ),
-                              ],
-                            ),
-                          )),
+                              ),
+                              SizedBox(
+                                width: 2,
+                              ),
+                              Image.asset(
+                                'assets/icons/icon_forward.png',
+                                width: 6,
+                                height: 12,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -177,7 +188,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               'assets/icons/icon_nav_home.png',
               width: 20,
             ),
-            label: 'Home',
+            label: 'Beranda',
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
@@ -191,7 +202,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               'assets/icons/icon_nav_gaji.png',
               width: 20,
             ),
-            label: 'School',
+            label: 'Gaji',
           ),
           BottomNavigationBarItem(
             icon: Image.asset(
@@ -204,7 +215,6 @@ class _HomePageStatefulState extends State<HomePageStateful> {
         currentIndex: _selectedIndex,
         selectedItemColor: redColor,
         onTap: _onItemTapped,
-        
       ),
     );
   }

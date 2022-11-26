@@ -2,6 +2,7 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:penggajian/pages/absensi_page.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
 import 'package:penggajian/pages/home_page_stateless.dart';
 import 'package:penggajian/pages/loading_page_pembayaran.dart';
@@ -88,28 +89,30 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       height: 60,
                     ),
-                    Container(
-                      width: 300,
-                      height: 50,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => HomePageStateful(),
+                    Center(
+                      child: Container(
+                        width: 300,
+                        height: 50,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AbsensiPage(),
+                              ),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            primary: redColor,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
                             ),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: redColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15),
                           ),
-                        ),
-                        child: Text(
-                          'Login',
-                          style: whiteTextStyle.copyWith(
-                            fontSize: 16,
+                          child: Text(
+                            'Login',
+                            style: whiteTextStyle.copyWith(
+                              fontSize: 16,
+                            ),
                           ),
                         ),
                       ),
