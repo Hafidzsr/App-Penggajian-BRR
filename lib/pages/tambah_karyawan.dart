@@ -26,7 +26,7 @@ class TambahKaryawan extends StatelessWidget {
                     Image.asset(
                       'assets/icons/icon_back.png',
                       width: 8,
-                      height: 16,
+                      height: 15,
                     ),
                     SizedBox(
                       width: 20,
