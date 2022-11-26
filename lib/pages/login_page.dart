@@ -2,11 +2,12 @@
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:penggajian/pages/absensi_page.dart';
+import 'package:penggajian/pages/gaji_page.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
 import 'package:penggajian/pages/home_page_stateless.dart';
 import 'package:penggajian/pages/loading_page_pembayaran.dart';
 import 'package:penggajian/pages/register_page.dart';
+import 'package:penggajian/pages/setting_page.dart';
 import 'package:penggajian/theme.dart';
 
 class LoginPage extends StatelessWidget {
@@ -89,23 +90,15 @@ class LoginPage extends StatelessWidget {
                     SizedBox(
                       height: 60,
                     ),
-                    Center(
-                      child: Container(
-                        width: 300,
-                        height: 50,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => AbsensiPage(),
-                              ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            primary: redColor,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
+                    Container(
+                      width: 300,
+                      height: 50,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Setting(),
                             ),
                           ),
                           child: Text(
