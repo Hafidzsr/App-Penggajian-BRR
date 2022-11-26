@@ -85,7 +85,7 @@ class LoginPage extends StatelessWidget {
                         hintText: 'Password',
                         hintStyle: greyTextStyle.copyWith(
                           fontWeight: FontWeight.w600,
-                          fontSize: 12,
+                          fontSize: 13,
                         ),
                       ),
                     ),
@@ -102,12 +102,18 @@ class LoginPage extends StatelessWidget {
                             MaterialPageRoute(
                               builder: (context) => ProfilPerusahaan(),
                             ),
+                          );
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: redColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
                           ),
-                          child: Text(
-                            'Login',
-                            style: whiteTextStyle.copyWith(
-                              fontSize: 16,
-                            ),
+                        ),
+                        child: Text(
+                          'Login',
+                          style: whiteTextStyle.copyWith(
+                            fontSize: 16,
                           ),
                         ),
                       ),
