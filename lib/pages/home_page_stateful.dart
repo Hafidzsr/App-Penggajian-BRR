@@ -191,7 +191,6 @@ class _HomePageStatefulState extends State<HomePageStateful> {
             label: 'Beranda',
           ),
           BottomNavigationBarItem(
-            
             icon: Image.asset(
               'assets/icons/icon_nav_absensi.png',
               width: 20,

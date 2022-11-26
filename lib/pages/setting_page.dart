@@ -1,6 +1,10 @@
+// ignore_for_file: unused_import, use_key_in_widget_constructors, prefer_const_constructors, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
+import 'package:penggajian/pages/application_information.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
 import 'package:penggajian/pages/login_page.dart';
+import 'package:penggajian/pages/profil_perusahaan.dart';
 import 'package:penggajian/theme.dart';
 
 class Setting extends StatefulWidget {
@@ -9,7 +13,7 @@ class Setting extends StatefulWidget {
 }
 
 class _SettingState extends State<Setting> {
- int _selectedIndex = 0;
+  int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -38,9 +42,7 @@ class _SettingState extends State<Setting> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(
-                        left: 16
-                      ),
+                      padding: const EdgeInsets.only(left: 16),
                       child: Row(
                         children: [
                           Container(
@@ -52,7 +54,7 @@ class _SettingState extends State<Setting> {
                             height: 50,
                             child: Image.asset(
                               'assets/images/logo_brr.png',
-                              ),                            
+                            ),
                           ),
                           SizedBox(
                             width: 7,
@@ -61,8 +63,8 @@ class _SettingState extends State<Setting> {
                             'Aplikasi Penggajian Karyawan\nCV. Bintang Rezky Ramadhan',
                             style: whiteTextStyle.copyWith(
                               fontSize: 12,
-                              ),
                             ),
+                          ),
                         ],
                       ),
                     ),
@@ -70,100 +72,122 @@ class _SettingState extends State<Setting> {
                       height: 16,
                     ),
                     Container(
-                      width: 600,
+                      width: MediaQuery.of(context).size.width,
                       height: 500,
                       decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: whiteColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(16),
+                          topRight: Radius.circular(16),
+                        ),
+                        color: whiteColor,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(
                           left: 16,
+                          right: 16,
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(
+                            SizedBox(
                               height: 20,
                             ),
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Container(
-                                  // ignore: sort_child_properties_last
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ApplicationInformation(),
+                                      ),
+                                    );
+                                  },
                                   child: Text(
                                     'Informasi Aplikasi',
-                                    style: blackTextStyle.copyWith(fontSize: 12),
+                                    style: blackTextStyle.copyWith(
+                                      fontSize: 12,
                                     ),
-                                    decoration: const BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors.black,
-                                          ),
-                                          )
-                                    ),
+                                  ),
+                                ),
+                                Divider(
+                                  color: blackColor,
+                                  thickness: 1,
+                                  indent: 0,
                                 ),
                                 SizedBox(
-                                  height: 26,
+                                  height: 20,
                                 ),
-                                Container(
-                                  // ignore: sort_child_properties_last
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            ApplicationInformation(),
+                                      ),
+                                    );
+                                  },
                                   child: Text(
                                     'Profil Perusahaan',
-                                    style: blackTextStyle.copyWith(fontSize: 12),
+                                    style: blackTextStyle.copyWith(
+                                      fontSize: 12,
                                     ),
-                                    decoration: const BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          color: Colors.black,
-                                          ),
-                                          )
-                                    ),
+                                  ),
                                 ),
-                                const SizedBox(
+                                Divider(
+                                  color: blackColor,
+                                  thickness: 1,
+                                  indent: 0,
+                                ),
+                                SizedBox(
                                   height: 114,
                                 ),
-                                Container(
-                                  width: 138,
-                                  height: 33,
-                                  child: ElevatedButton(
-                                  onPressed: () {
-                                  Navigator.push(
-                                  context,
-                                   MaterialPageRoute(
-                                   builder: (context) => LoginPage(),
-                                    ),
-                                    );
+                                Center(
+                                  child: Container(
+                                    width: 138,
+                                    height: 33,
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => LoginPage(),
+                                          ),
+                                        );
                                       },
-                                style: ElevatedButton.styleFrom(
-                                  primary: redColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(15),
+                                      style: ElevatedButton.styleFrom(
+                                        primary: redColor,
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(15),
                                         ),
-                                          ),
+                                      ),
                                       child: Text(
-                                       'Logout',
+                                        'Logout',
                                         style: whiteTextStyle.copyWith(
-                                        fontSize: 10,
-                                         ),
-                                          ),
-                                            ),
-                                             ),
+                                          fontSize: 10,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
-
-                            ],
+                          ],
                         ),
                       ),
                     )
                   ],
-                ), 
+                ),
               ),
             ),
           ],
-
         ),
-        ),
-            bottomNavigationBar: BottomNavigationBar(
+      ),
+      bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
             icon: Image.asset(
@@ -197,7 +221,6 @@ class _SettingState extends State<Setting> {
         currentIndex: _selectedIndex,
         selectedItemColor: redColor,
         onTap: _onItemTapped,
-        
       ),
     );
   }
