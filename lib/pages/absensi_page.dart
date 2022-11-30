@@ -10,16 +10,6 @@ class AbsensiPage extends StatefulWidget {
 }
 
 class _AbsensiPageState extends State<AbsensiPage> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(
-      () {
-        _selectedIndex = index;
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,41 +102,6 @@ class _AbsensiPageState extends State<AbsensiPage> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_home.png',
-              width: 20,
-            ),
-            label: 'Beranda',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_absensi.png',
-              width: 20,
-            ),
-            label: 'Absensi',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_gaji.png',
-              width: 20,
-            ),
-            label: 'Gaji',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_pengaturan.png',
-              width: 20,
-            ),
-            label: 'Pengaturan',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: redColor,
-        onTap: _onItemTapped,
       ),
     );
   }

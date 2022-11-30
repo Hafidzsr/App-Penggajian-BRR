@@ -13,14 +13,6 @@ class Setting extends StatefulWidget {
 }
 
 class _SettingState extends State<Setting> {
-  int _selectedIndex = 0;
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -186,41 +178,6 @@ class _SettingState extends State<Setting> {
             ),
           ],
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_home.png',
-              width: 20,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_absensi.png',
-              width: 20,
-            ),
-            label: 'Absensi',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_gaji.png',
-              width: 20,
-            ),
-            label: 'School',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_pengaturan.png',
-              width: 20,
-            ),
-            label: 'Pengaturan',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: redColor,
-        onTap: _onItemTapped,
       ),
     );
   }
