@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:penggajian/pages/absensi_page.dart';
+import 'package:penggajian/pages/gaji_page.dart';
 import 'package:penggajian/pages/home_page_stateful.dart';
 import 'package:penggajian/pages/setting_page.dart';
 import 'package:penggajian/theme.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     HomePageStateful(),
     AbsensiPage(),
-    Container(),
+    GajiKaryawan(),
     Setting(),
   ];
 

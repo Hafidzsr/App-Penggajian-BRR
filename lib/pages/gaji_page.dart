@@ -166,70 +166,83 @@ class _GajiKaryawanState extends State<GajiKaryawan> {
                                 
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 16),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                  child: ListView(
                                     children: [
-                                      SizedBox(
-                                        height: 19,
-                                      ),
-                                      Text(
-                                        'Daftar Karyawan',
-                                        style: blackTextStyle.copyWith(
-                                          fontSize: 15,
-                                          ),
-                                        ),
+                                      Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
                                         SizedBox(
-                height: 30,
-              ),
-              ItemKaryawan(
-                Karyawan(
-                  id: 1,
-                  nama: 'Hafidz Surya Ramadhan',
-                  noHp: '081234567890',
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ItemKaryawan(
-                Karyawan(
-                  id: 2,
-                  nama: 'Hafidz Surya Ramadhan',
-                  noHp: '081234567890',
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ItemKaryawan(
-                Karyawan(
-                  id: 3,
-                  nama: 'Hafidz Surya Ramadhan',
-                  noHp: '081234567890',
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ItemKaryawan(
-                Karyawan(
-                  id: 4,
-                  nama: 'Surya Ramadhan Hafidz',
-                  noHp: '08123487237483',
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ItemKaryawan(
-                Karyawan(
-                  id: 5,
-                  nama: 'Ramadhan Surya Hafidz',
-                  noHp: '0812387639234',
-                ),
-              ),
-                                    ],
-                                  ),
+                                          height: 19,
+                                        ),
+                                        Text(
+                                          'Daftar Karyawan',
+                                          style: blackTextStyle.copyWith(
+                                            fontSize: 15,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                                  height: 30,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 1,
+                                                    nama: 'Hafidz Surya Ramadhan',
+                                                    noHp: '081234567890',
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 2,
+                                                    nama: 'Hafidz Surya Ramadhan',
+                                                    noHp: '081234567890',
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 3,
+                                                    nama: 'Hafidz Surya Ramadhan',
+                                                    noHp: '081234567890',
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 4,
+                                                    nama: 'Surya Ramadhan Hafidz',
+                                                    noHp: '08123487237483',
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 5,
+                                                    nama: 'Ramadhan Surya Hafidz',
+                                                    noHp: '0812387639234',
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  height: 20,
+                                                ),
+                                                ItemKaryawan(
+                                                  Karyawan(
+                                                    id: 5,
+                                                    nama: 'Ramadhan Surya Hafidz',
+                                                    noHp: '0812387639234',
+                                                  ),
+                                                ),
+                                      ],
+                                    ),
+                    ]),
                                 ),
 
                                ),
@@ -244,43 +257,6 @@ class _GajiKaryawanState extends State<GajiKaryawan> {
           ]),
       ),
     ),
-    bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_home.png',
-              width: 20,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            
-            icon: Image.asset(
-              'assets/icons/icon_nav_absensi.png',
-              width: 20,
-            ),
-            label: 'Absensi',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_gaji.png',
-              width: 20,
-            ),
-            label: 'School',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/icons/icon_nav_pengaturan.png',
-              width: 20,
-            ),
-            label: 'Pengaturan',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: redColor,
-        onTap: _onItemTapped,
-        
-      ),
     );
   }
 }

@@ -33,7 +33,9 @@ class TambahKaryawan extends StatelessWidget {
                     ),
                     Text(
                       'Tambah Karyawan',
-                      style: blackTextStyle.copyWith(fontSize: 15),
+                      style: blackTextStyle.copyWith(
+                        fontSize: 15,
+                        ),
                     ),
                   ],
                 ),
