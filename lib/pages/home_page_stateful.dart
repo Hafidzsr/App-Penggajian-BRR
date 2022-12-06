@@ -123,7 +123,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               ItemKaryawan(
                 Karyawan(
                   id: 1,
-                  nama: 'Hafidz Surya Ramadhan',
+                  namaLengkap: 'Hafidz Surya Ramadhan',
                   noHp: '081234567890',
                 ),
               ),
@@ -133,7 +133,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               ItemKaryawan(
                 Karyawan(
                   id: 2,
-                  nama: 'Hafidz Surya Ramadhan',
+                  namaLengkap: 'Hafidz Surya Ramadhan',
                   noHp: '081234567890',
                 ),
               ),
@@ -143,7 +143,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               ItemKaryawan(
                 Karyawan(
                   id: 3,
-                  nama: 'Hafidz Surya Ramadhan',
+                  namaLengkap: 'Hafidz Surya Ramadhan',
                   noHp: '081234567890',
                 ),
               ),
@@ -153,7 +153,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               ItemKaryawan(
                 Karyawan(
                   id: 4,
-                  nama: 'Surya Ramadhan Hafidz',
+                  namaLengkap: 'Surya Ramadhan Hafidz',
                   noHp: '08123487237483',
                 ),
               ),
@@ -163,7 +163,7 @@ class _HomePageStatefulState extends State<HomePageStateful> {
               ItemKaryawan(
                 Karyawan(
                   id: 5,
-                  nama: 'Ramadhan Surya Hafidz',
+                  namaLengkap: 'Ramadhan Surya Hafidz',
                   noHp: '0812387639234',
                 ),
               ),

@@ -23,7 +23,7 @@ class ItemKaryawan extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '${karyawan.nama}',
+              '${karyawan.namaLengkap}',
               style: blackTextStyle.copyWith(
                 fontSize: 15,
               ),
