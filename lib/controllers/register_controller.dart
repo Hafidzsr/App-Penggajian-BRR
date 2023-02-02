@@ -81,8 +81,6 @@ class RegisterController extends GetxController {
 
   //* Upload Image
   uploadImage({required File image, required String token}) async {
-    // Get the file name
-    // String fileName = imageFile.path.split('/').last;
     try {
       isLoading.value = true;
       var request = http.MultipartRequest(

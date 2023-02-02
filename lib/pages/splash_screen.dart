@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:penggajian/pages/auth/login.dart';
+import 'package:penggajian/pages/onboarding_page.dart';
 import 'package:penggajian/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,9 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      Duration(seconds: 4),
+      Duration(seconds: 3),
       () {
-        Get.off(LoginPage());
+        Get.off(OnBoardingPage());
       },
     );
   }

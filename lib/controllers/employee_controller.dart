@@ -23,6 +23,80 @@ class EmployeeController extends GetxController {
   TextEditingController accNumberController = TextEditingController();
   TextEditingController salaryController = TextEditingController();
 
+  //* Absent
+  TextEditingController dateInput = TextEditingController();
+
+  List multipleSelectedHarian = [];
+
+  List checkListItemsHarian = [
+    {
+      "id": 0,
+      "value": false,
+      "title": "Senin",
+    },
+    {
+      "id": 1,
+      "value": false,
+      "title": "Selasa",
+    },
+    {
+      "id": 2,
+      "value": false,
+      "title": "Rabu",
+    },
+    {
+      "id": 3,
+      "value": false,
+      "title": "Kamis",
+    },
+    {
+      "id": 4,
+      "value": false,
+      "title": "Jumat",
+    },
+    {
+      "id": 5,
+      "value": false,
+      "title": "Sabtu",
+    },
+  ];
+
+  List multipleSelectedLembur = [];
+
+  List checkListItemsLembur = [
+    {
+      "id": 0,
+      "value": false,
+      "title": "Minggu",
+    },
+    {
+      "id": 1,
+      "value": false,
+      "title": "Senin",
+    },
+    {
+      "id": 2,
+      "value": false,
+      "title": "Selasa",
+    },
+    {
+      "id": 3,
+      "value": false,
+      "title": "Rabu",
+    },
+    {
+      "id": 4,
+      "value": false,
+      "title": "Kamis",
+    },
+    {
+      "id": 5,
+      "value": false,
+      "title": "Jumat",
+    },
+  ];
+  //*
+
   @override
   Future<void> onInit() async {
     super.onInit();
